@@ -17,7 +17,7 @@ app.post("/sing-up", (req, res) => {
     }
 
     users.push({username, avatar})
-    res.status(200).send("ok")
+    res.status(201).send("ok")
 }) 
 
 
