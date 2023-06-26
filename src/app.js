@@ -19,3 +19,17 @@ app.post("/sing-up", (req, res) => {
     users.push({username, avatar})
     res.status(200).send("ok")
 }) 
+
+
+app.post("/tweets", (req, res) => {
+    const {username, tweet} = req.body
+
+    if(!username || !tweet){
+        res.status(400).send("UNAUTHORIZED")
+        return
+    }
+
+    tweets.push({username,tweet})
+    res.status(200).send("ok")
+})
+
